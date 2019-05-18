@@ -1,4 +1,4 @@
-<?php 
+<?php
 // linking CSS and JS file.
 
 function func_setup(){
@@ -25,6 +25,10 @@ function func_init() {
 
 add_action('after_setup_theme', 'func_init');
 
+function bootstrapstarter_wp_setup() {
+	add_theme_support('title-tag');
+}
+add_action('after_setup_theme','bootstrapstarter_wp_setup');
 // posttype for custom posts
 
 function func_custom_posts() {
@@ -48,4 +52,3 @@ function func_custom_posts() {
 }
 
 add_action('init', 'func_custom_posts');
-

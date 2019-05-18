@@ -5,4 +5,233 @@ Author URI: https://iankirkwood.org
 Description: The official theme for IanKirkwood
 Version 1.0
 */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
 
+/* Hero image*/
+
+.hero-image {
+  height: 10%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Sections */
+
+section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.section-heading {
+  font-size: 30px;
+  font-family: "Roboto Condensed", sans-serif;
+  transition: all 0.4s;
+  display: inline-block;
+  padding: 4px 0px;
+}
+
+.section-heading:hover {
+  padding: 4px 42%;
+  border-radius: 100px;
+  border-width: thick;
+  border-color: #ff0000;
+  background: Black;
+  color: white;
+}
+
+/* Section Source */
+
+#section-source p {
+  padding: 8px;
+  text-align: center;
+}
+
+#section-source a {
+  margin: 8px;
+  text-align: center;
+}
+
+/* Card */
+
+.card-image {
+  transition: 0.4s;
+}
+
+.card-image:hover {
+  box-shadow: 0 15px 15px -6px #660000;
+}
+
+.card .card-description {
+  padding: 0 8px;
+}
+.btn-outline-danger {
+    border-radius: 50px;
+    text-align: center;
+}
+.card-meta-blogpost{
+  color:#333;
+  font-size:14px;
+  padding: 16px;
+  font-family:'Roboto Slab', serif;
+}
+
+#texts {
+  padding-top: 14px;
+  padding-left: 14px;
+  padding-right: 14px;
+  text-align: justify;
+  line-height: 1.5;
+}
+.card-meta-blogpost a{
+  color:#333;
+}
+
+.card-meta{
+  color:#333;
+  font-size: 14px;
+  padding-left:8px;
+  font-family:'Roboto Slab', serif;
+}
+
+.card-meta a{
+  color:#333;
+}
+
+/*Image overlay for main page 3 images*/
+.col-sm-4:hover .imageoverlay {
+    opacity: 0.3;
+}
+
+.col-sm-4:hover .transformations {
+    opacity: 1;
+}
+
+.transformations {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.overlaytext {
+    color: Black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 16px 32px;
+}
+
+.imageoverlay {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .4s ease;
+    backface-visibility: hidden;
+}
+/* Media Queries */
+
+@media (max-width: 900px) {
+  nav ul {
+    display: none;
+  }
+
+  #menu-icon {
+    display: flex;
+  }
+
+  #slideout-menu {
+    display: block;
+  }
+
+  #searchbox {
+    display: none;
+  }
+
+  #blogpost{
+    width:100%;
+    border-left:0;
+  }
+
+  #sidebar{
+    display: none;
+  }
+}
+
+@media (max-width: 719px) {
+  main {
+    width: 95%;
+  }
+
+  section {
+    flex-direction: column;
+  }
+
+  .card,
+  .card .card-image img {
+    width: 100%;
+    border: none;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  #banner h3 {
+    font-size: 20px;
+  }
+
+  .card {
+    text-align: center;
+  }
+
+  #logo-img {
+    padding: 0;
+  }
+}
+
+@media (min-width: 720px) {
+  main {
+    width: 95%;
+  }
+  .card {
+    width: 45%;
+    border: none;
+  }
+  .card .card-image img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    width: 85%;
+  }
+}
