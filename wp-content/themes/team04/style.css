@@ -5,9 +5,22 @@ Author URI: https://iankirkwood.org
 Description: The official theme for IanKirkwood
 Version 1.0
 */
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
+}
+
+
+#banner{
+  position: relative;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+    font-family: 'HelveticaLTStdLight';
+  color: #222222;
 }
 
 /* Hero image*/
@@ -100,6 +113,7 @@ section {
   text-align: justify;
   line-height: 1.5;
 }
+
 .card-meta-blogpost a{
   color:#333;
 }
@@ -150,6 +164,39 @@ section {
     transition: .4s ease;
     backface-visibility: hidden;
 }
+
+/* Sidebar */
+
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding-left: 8px;
+  padding-bottom: 8px;
+  padding-right: 18px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenavsidecontext {
+  margin-left: 250px;
+  padding: 0px 10px;
+}
+
 /* Media Queries */
 
 @media (max-width: 900px) {
@@ -174,8 +221,9 @@ section {
     border-left:0;
   }
 
-  #sidebar{
-    display: none;
+  .sidenavsidecontext {
+    margin-left: 180px;
+    padding: 0px 10px;
   }
 }
 
@@ -192,6 +240,14 @@ section {
   .card .card-image img {
     width: 100%;
     border: none;
+  }
+
+  sidenav {
+  width: 180px;
+  }
+  .sidenavsidecontext {
+    margin-left: 180px;
+    padding: 0px 10px;
   }
 }
 
@@ -215,6 +271,15 @@ section {
   #logo-img {
     padding: 0;
   }
+
+  .sidenav {
+  width: 180px;
+  }
+
+  .sidenavsidecontext {
+    margin-left: 180px;
+    padding: 0px 10px;
+  }
 }
 
 @media (min-width: 720px) {
@@ -228,10 +293,25 @@ section {
   .card .card-image img {
     width: 100%;
   }
+  .sidenav {
+  width: 180px;
+  }
+  .sidenavsidecontext {
+    margin-left: 180px;
+    padding: 0px 10px;
+  }
+  .sidenavgallery {
+    margin-left: 180px;
+    padding: 0px 10px;
+  }
 }
 
 @media (min-width: 1200px) {
   main {
     width: 85%;
   }
+  .sidenav {
+  text-decoration: none;
+  }
+  .sidenav a {font-size: 18px;}
 }
