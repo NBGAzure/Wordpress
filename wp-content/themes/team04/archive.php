@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="container-fluid text-center py-5">
-<a href="<?php echo site_url('/blog'); ?>"><h2 class="section-heading">All Blogs</h2></a>
+<a href="<?php echo site_url('/blog'); ?>"><h2 class="section-heading">Projects</h2></a>
 </div>
 
 					<section>
@@ -10,9 +10,9 @@
 							'post_type' => 'post',
 
 						);
-						$blogposts = new WP_Query($args);
-						while ($blogposts->have_posts()) {
-							$blogposts->the_post();
+
+						while (have_posts()) {
+							the_post();
 						?>
 
 <div class="card mb-3">
