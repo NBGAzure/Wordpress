@@ -4,16 +4,13 @@
                 <a href="<?php echo site_url(''); ?>">Home</a>
             </li>
             <li>
-                <a href="<?php echo site_url('/blog'); ?>">Blog</a>
+                <a href="<?php echo site_url('/blog'); ?>">Sustainability</a>
             </li>
             <li>
-                <a href="<?php echo site_url('/projects'); ?>">projects</a>
+                <a href="<?php echo site_url('/projects'); ?>">Education</a>
             </li>
             <li>
-                <a href="<?php echo site_url('/about'); ?>">about</a>
-            </li>
-            <li>
-                <a href="about.html">Contact</a>
+                <a href="<?php echo site_url('/about'); ?>">About</a>
             </li>
             <li>
                 <input type="text" placeholder="Search Here">
@@ -40,17 +37,17 @@
             <li>
                 <a href="<?php echo site_url('/blog'); ?>"
                   <?php if(get_post_type() == 'post') echo 'class="active"' ?>
-                  >Blog</a>
+                  >Sustainability</a>
             </li>
             <li>
                 <a href="<?php echo site_url('/projects'); ?>"
                   <?php if(get_post_type() == 'project') echo 'class="active"' ?>
-                  >projects</a>
+                  >Education</a>
             </li>
             <li>
                 <a href="<?php echo site_url('/about'); ?>"
                   <?php if(is_page('about')) echo 'class="active"' ?>
-                  >about</a>
+                  >About</a>
             </li>
 
             <li>

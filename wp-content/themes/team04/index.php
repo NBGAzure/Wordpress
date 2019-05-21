@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
-<?php include("inc/heroimage.inc") ?>
 
-<div class="container-fluid text-center py-5">
-<a href="<?php echo site_url('/blog'); ?>"><h2 class="section-heading">All Blogs</h2></a>
-</div>
+<div class="container-fluid text-center py-5 ">
+	<div class="mt-5">
+<a href="<?php echo site_url('/blog'); ?>"><h2 class="section-heading">Sustainability</h2></a>
+</div></div>
 
 					<section>
 						<?php
@@ -32,7 +32,7 @@
 				<a href="#"><?php echo get_the_category_list(', ') ?></a><br>
 			<p id="texts" class="ml-2"><?php echo wp_trim_words(get_the_excerpt(),40);?></p>
 			                    <div class="text-center">
-			                    <a href="<?php the_permalink();?>"><button type="button" class="btn btn-outline-danger">Read more</button></a><br><br>
+			                    <a href="<?php the_permalink();?>"><button type="button" class="btn btn-outline-primary">Read more</button></a><br><br>
 			                  </div>
 	</div>
 </div>

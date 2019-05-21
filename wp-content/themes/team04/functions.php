@@ -52,3 +52,17 @@ function func_custom_posts() {
 }
 
 add_action('init', 'func_custom_posts');
+
+//sidenavbar
+
+function gt_widgets() {
+	register_sidebar(
+		array(
+		'name' => 'Main Sidebar',
+		'id' => 'main_sidebar',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>'
+		)
+	);
+}
+add_action('widgets_init', 'gt_widgets');

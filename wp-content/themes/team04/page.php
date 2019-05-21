@@ -7,10 +7,7 @@ while(have_posts()) {
 <?php include("inc/heroimage.inc") ?>
 
 <div class="sidenav">
-  <a href="#">name</a>
-  <a href="#">name</a>
-  <a href="#">name</a>
-  <a href="#">Blog name</a>
+  <?php dynamic_sidebar('main_sidebar'); ?>
 </div>
 
 <div class="sidenavsidecontext">
@@ -30,10 +27,6 @@ while(have_posts()) {
 
 <?php } ?>
 
-
-<div id="comments-section">
-  Comments Section
-</div>
 </div>
 
 
