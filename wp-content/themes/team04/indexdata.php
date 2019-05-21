@@ -137,7 +137,7 @@ wp_reset_query(); ?>
 
             <section>
               <div class="container-fluid text-center py-5">
-              <a href="<?php echo site_url('/blog'); ?>"><h2 class="section-heading">Different section of blogs</h2></a>
+              <a href="<?php echo site_url('/blog'); ?>"><h2 class="section-heading">Education</h2></a>
               </div>
 
   <section>

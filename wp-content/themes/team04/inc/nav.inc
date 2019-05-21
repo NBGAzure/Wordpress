@@ -21,7 +21,7 @@
     <nav>
         <div id="logo-img">
             <a href="<?php echo site_url(''); ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/1.jpg" alt="Ian Kirkwood">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/1.png" alt="Ian Kirkwood">
             </a>
         </div>
         <div id="menu-icon">

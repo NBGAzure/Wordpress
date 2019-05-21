@@ -26,7 +26,7 @@
 			  <a href="<?php the_permalink(); ?>">
 			    <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" width="400" height="300" style="max-width: 100%; height: auto; padding: 16px;"></a>
 
-			<h3 class="section-heading ml-3"><?php the_title();?></h3>
+			<h4 class="section-heading ml-3"><?php the_title();?></h4>
 			<div class="card-meta ml-2">
 				posted by <?php the_author(); ?> <?php the_time('F j, Y') ?> in
 				<a href="#"><?php echo get_the_category_list(', ') ?></a><br>

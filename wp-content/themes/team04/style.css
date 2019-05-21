@@ -98,7 +98,8 @@ nav ul {
 #logo-img {
   display: flex;
   height: 100%;
-  padding: 0 32px;
+  margin-left: 50px;
+  padding: 0px 0px;
   align-items: center;
   color: white;
   transition: 0.3s;
@@ -223,7 +224,7 @@ section {
 }
 
 .section-heading:hover {
-  padding: 4px 42%;
+  padding: 4px 4%;
   border-radius: 100px;
   border-width: thick;
   border-color: #ff0000;
