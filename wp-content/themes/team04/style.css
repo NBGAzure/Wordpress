@@ -380,6 +380,23 @@ section {
   color:#333;
 }
 
+/* Sidebar */
+
+#sidebar{
+  background:#333;
+  flex:1;
+  padding: 8px 16px;
+  color:white;
+  box-shadow: inset 27px 0 51px -18px rgba(0,0,0,0.75);
+}
+
+/* Comments section */
+
+#comments-section{
+  border-top: 2px solid #eee;
+  padding:8px;
+}
+
 /*Image overlay for main page 3 images*/
 .col-sm-4:hover .imageoverlay {
     opacity: 0.3;
@@ -425,9 +442,9 @@ section {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: black;
   overflow-x: hidden;
-  padding-top: 20px;
+  padding-top: 130px;
 }
 
 .sidenav a {
@@ -556,25 +573,6 @@ section {
     margin-left: 180px;
     padding: 0px 10px;
   }
-}
-/* Pagination */
-
-.pagination{
-  padding:8px;
-  text-align:center;
-  font-weight:bold;
-}
-
-.pagination a{
-  border-top: 3px solid white;
-  display: inline-block;
-  padding:8px 16px;
-  transition:0.4s;
-}
-
-.pagination a:hover{
-  text-decoration: none;
-  border-top:3px solid black;
 }
 
 @media (min-width: 1200px) {

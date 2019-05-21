@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 
-<div class="container-fluid text-center py-5">
+<?php include("inc/heroimage.inc") ?>
+
+<div class="container-fluid text-center mt-5 pt-2">
 <a href="<?php echo site_url('/blog'); ?>"><h2 class="section-heading">Projects</h2></a>
 </div>
 
