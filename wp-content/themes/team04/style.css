@@ -103,6 +103,7 @@ nav ul {
   align-items: center;
   color: white;
   transition: 0.3s;
+  background-color: white;
 }
 
 #logo-img img {
@@ -111,6 +112,7 @@ nav ul {
 
 #logo-img:hover {
   background: #9999ff;
+
 }
 
 #menu-icon {

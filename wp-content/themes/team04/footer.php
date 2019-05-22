@@ -1,8 +1,8 @@
 <style type="text/css">
-	/*footer {
+	footer {
 	    background: #777;
 	    padding: 60px 0 70px;
-	}*/
+	}
 	#copyright {
 	    background: #000;
 	    padding: 25px 0;
@@ -37,34 +37,7 @@
 	    display: inline-block;
 	}
 </style>	
-<section>
-<footer>
-  <div class="container-flex">
-    <div class="row">
-      <div class="col-md-5">
-        <div class="logo_foot">
-          <?php dynamic_sidebar( 'first-footer-widget-area' ); ?>
-        </div>
-      </div>
 
-    
-      <div class="col-md-3 col-md-offset-1">
-        <div class="logo_menu">
-          <?php dynamic_sidebar( 'second-footer-widget-area' ); ?>
-        </div>
-      </div>
-
-      <div class="col-md-2 col-md-offset-1">
-        <div class="logo_menu">
-         <?php dynamic_sidebar( 'third-footer-widget-area' ); ?>
-        </div>
-      </div>
-
-
-    </div>
-  </div>
-</footer>
-</section>
 
 <section id="copyright">
     <div class="row">

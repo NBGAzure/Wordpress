@@ -2,21 +2,21 @@
   <br>
   <div class="row">
     <div class="col-sm-4">
-      <img class="img-responsive mb-3 border border-primary imageoverlay" src="wp-content/themes/team04/img/1(a).jpg" alt="Sustanability" style="max-width: 100%;" title="Sustanability" >
+      <img class="img-responsive mb-3 border border-primary imageoverlay" src="wp-content/themes/team04/img/Book.jpg" alt="Sustanability" style="max-width: 100%;" title="Sustanability" >
       <div class="transformations">
-      <div class="overlaytext">Tagline</div>
+      <div class="overlaytext">Education</div>
       </div>
     </div>
     <div class="col-sm-4">
-      <img class="img-responsive mb-3 border border-primary imageoverlay" src="wp-content/themes/team04/img/1(b).jpg" alt="Motorcycling" style="max-width: 100%;" title="motorcycling">
+      <img class="img-responsive mb-3 border border-primary imageoverlay" src="wp-content/themes/team04/img/motorbike.jpg" alt="Motorcycling" style="max-width: 100%;" title="motorcycling">
       <div class="transformations">
-      <div class="overlaytext">Tagline</div>
+      <div class="overlaytext">Motorcycling</div>
       </div>
     </div>
     <div class="col-sm-4">
-     <img class="img-responsive mb-3 border border-primary imageoverlay" src="wp-content/themes/team04/img/1(c).jpg" alt="Education" style="max-width: 100%;" title="Education">
+     <img class="img-responsive mb-3 border border-primary imageoverlay" src="wp-content/themes/team04/img/Sus.jpg" alt="Education" style="max-width: 100%;" title="Education">
      <div class="transformations">
-     <div class="overlaytext">Tagline</div>
+     <div class="overlaytext">Sustainability</div>
      </div>
     </div>
   </div>
