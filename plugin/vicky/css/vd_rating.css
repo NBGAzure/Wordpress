@@ -10,7 +10,7 @@ button:focus {
     outline: 0px dotted;
     outline: 0px auto -webkit-focus-ring-color;
 }
-#toggleRating { 
+#toggleRating {
     background:#333;
     color: white;
     border:none;
@@ -19,6 +19,7 @@ button:focus {
     font-size: small;
     position: relative;
 }
+
 #toggleRating .arrow {
     display: inline-block;
     vertical-align: middle;

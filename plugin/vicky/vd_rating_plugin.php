@@ -4,19 +4,13 @@
  * Plugin Name: Rating Post Plugin
  * Description: Rating Plugin
  * Author: Vicky Desai
- * Version:1.0
+ * Version:1.1 
  */
 
 if( ! defined( 'ABSPATH' ) ) {
 	return;
 } 
-?>
-<style type="text/css">
-    li.wp-first-item {
-        display: none;
-    }
-</style>
-<?php
+
 /**
  * Top Level Menu and submenu
  */
@@ -261,6 +255,30 @@ function vd_rating_render() {
     $ratingValues = 5;
     ?>
    
-  
+    <div id="contentRating" class="vd-rating">
+        <button type="button" id="toggleRating" class="active">
+            <span class="text">
+                <?php _e( 'Rate It', 'vd' ); ?>
+            </span>
+            <span class="arrow"></span>
+        </button> 
+        <div id="entryRating" class="vd-rating-content active">
+            <div class="errors" id="ratingErrors"></div>
+            <ul>
+                <?php for( $i = 1; $i <= $ratingValues; $i++ ) {
+                    echo '<li>';
+                        echo '<input type="radio" name="ratingValue" value="' . $i . '" id="rating' . $i . '"/>';;
+                        
+                        echo '<label for="rating' . $i . '">';
+                            echo $i;
+                        echo '</label>';
+                    echo '</li>';
+                }
+                ?>
+                 
+            </ul>
+            <button type="button" data-rate="<?php echo get_the_id(); ?>"id="submitRating"><?php _e( 'Submit', 'vd' ); ?></button>
+        </div>
+    </div>
     <?php
 }
