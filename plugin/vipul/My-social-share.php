@@ -3,9 +3,15 @@
 /*
 Plugin Name: VSS Social Share
 Description: Social Share Plugin
-Version: 1.0
+Version: 1.1
 Author: VipulDeep Singh
 */
+
+function vss_scripts_social(){
+    wp_enqueue_style('Social', plugins_url( '/css/style.css' , __FILE__ ), false, '2.2', 'all' );
+}
+add_action("wp_enqueue_scripts","vss_scripts_social");
+
 
 function vss_social_share_menu_item()
 {
@@ -80,6 +86,47 @@ function social_share_googleplus_checkbox()
 		}
  
 add_action("admin_init", "vss_social_share_settings");
+
+
+
+function add_vss_social_share_icons($content)
+		{
+		    $html = "<div class='social-share-wrapper'><div>Share on:</div><ul class='dshare'>";
+
+		    //global $post;
+
+		    $url = get_permalink($post->ID);
+		    $url = esc_url($url);
+
+		    if(get_option("social-share-facebook") == 1)
+			    {
+			        $html = $html . "<li class='facebook'><a target='_blank' href='http://www.facebook.com/sharer.php?u=" . $url . "'>
+			        Facebook</a></li>";
+			    }
+
+		    if(get_option("social-share-twitter") == 1)
+			    {
+			        $html = $html . "<li class='twitter'><a target='_blank' href='https://twitter.com/share?url=" . $url . "'>Twitter</a></li>";
+			    }
+
+		    if(get_option("social-share-linkedin") == 1)
+			    {
+			        $html = $html . "<li class='linkedin'><a target='_blank' href='http://www.linkedin.com/shareArticle?url=" . $url . "'>LinkedIn</a></li>";
+			    }
+
+			 if(get_option("social-share-googleplus") == 1)
+			    {
+			        $html = $html . "<li class='googleplus'><a target='_blank' href='https://plus.google.com/share?url=" . $url . "'>googleplus</a></li>";
+			    }   
+
+		   
+
+		    $html = $html . "<div class='clear'></div></ul></div>";
+
+		    return $content = $content . $html;
+		}
+
+add_shortcode("vss_social", "add_vss_social_share_icons");
 
 
 ?>
