@@ -4,11 +4,11 @@
  * Plugin Name: Rating Post Plugin
  * Description: Rating Plugin
  * Author: Vicky Desai
- * Version:1.1 
+ * Version:1.2
  */
 
 if( ! defined( 'ABSPATH' ) ) {
-	return;
+    return;
 } 
 
 /**
@@ -17,23 +17,23 @@ if( ! defined( 'ABSPATH' ) ) {
 function vd_rating_options_page()
 {
     // add top level menu page
-   	add_menu_page(
+    add_menu_page(
         'Ratings',
         'Ratings',
         'manage_options',
         'vd_rating',
-        //'vd_rating_page_html',
+        'vd_rating_page_html',
         'dashicons-star-empty'
     );
 
-   	add_submenu_page( 
-   	 	'vd_rating', 
-   	 	'Settings', 
-   	 	'Settings', 
-   	 	'manage_options', 
-   	 	'vd_rating_settings', 
-   	 	'vd_rating_settings_html'
-   	 );
+    add_submenu_page( 
+        'vd_rating', 
+        'Settings', 
+        'Settings', 
+        'manage_options', 
+        'vd_rating_settings', 
+        'vd_rating_settings_html'
+     );
 }
 add_action('admin_menu', 'vd_rating_options_page');
 
@@ -83,6 +83,47 @@ function vd_rating_page_html() {
         return;
     }
     global $wpdb;
+
+    // SQL query to get all the content which has the meta key 'vd_rating'. Group the content by the ID and get an average rating on each
+    $sql = "SELECT * FROM ( SELECT p.post_title 'title', p.guid 'link', post_id, AVG(meta_value) AS rating, count(meta_value) 'count' FROM {$wpdb->prefix}postmeta pm";
+    $sql .= " LEFT JOIN wp_posts p ON p.ID = pm.post_id";
+    $sql .= " where meta_key = 'vd_rating' group by post_id ) as ratingTable ORDER BY rating DESC";
+    
+    $result = $wpdb->get_results( $sql, 'ARRAY_A' );
+    
+    ?>
+    <div class="wrap">
+        <h1><?php echo esc_html(get_admin_page_title()); ?></h1>
+        <div id="poststuff">
+            <table class="form-table widefat">
+                <thead>
+                    <tr>
+                        <td>
+                            <strong><?php _e( 'Content', 'vd' ); ?></strong>
+                        </td>
+                        <td>
+                            <strong><?php _e( 'Rating', 'vd' ); ?></strong>
+                        </td>
+                        <td>
+                           <strong><?php _e( 'No. of Ratings', 'vd' ); ?></strong>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php 
+                        foreach ( $result as $row ) {
+                            echo '<tr>';
+                                echo '<td>' . $row['title'] . '<br/><a href="' . $row['link'] . '" target="_blank">' . __( 'View the Content', 'vd' ) . '</a></td>';
+                                echo '<td>' . round( $row['rating'], 2 ) . '</td>';
+                                echo '<td>' . $row['count'] . '</td>';
+                            echo '</tr>';
+                        }
+                    ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <?php
 }
 
 /**
@@ -257,7 +298,7 @@ function vd_rating_render() {
    
     <div id="contentRating" class="vd-rating">
         <button type="button" id="toggleRating" class="active">
-            <span class="text">
+            <span class="text_rate">
                 <?php _e( 'Rate It', 'vd' ); ?>
             </span>
             <span class="arrow"></span>
