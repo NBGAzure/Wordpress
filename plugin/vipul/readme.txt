@@ -5,11 +5,9 @@ Tested up to: 5.0
 Requires PHP: 5.2.4
 Stable tag: 4.3
 
-Just another social share plugin. Simple but flexible.
-
 == Description ==
 
-Basic Social sharing data plugin for assignment purpose CMS.
+This Social share plugin is created to share the blogpost online with other platforms. It includes four options for sharing the posts on social media platforms like twitter, facebook, google plus and LinkedIn. It is created to provide such functionalities while being flexible at the same time. It potrays simple layout but works completely fine.
 
 == Installation ==
 
