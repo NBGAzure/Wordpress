@@ -3,7 +3,7 @@
 /*
 Plugin Name: VSS Social Share
 Description: Social Share Plugin
-Version: 1.1
+Version: 1.2
 Author: VipulDeep Singh
 */
 
@@ -19,8 +19,6 @@ function vss_social_share_menu_item()
 }
 
 add_action("admin_menu", "vss_social_share_menu_item");
-
-
 
 
 function vss_social_share_page()
@@ -91,9 +89,9 @@ add_action("admin_init", "vss_social_share_settings");
 
 function add_vss_social_share_icons($content)
 		{
-		    $html = "<div class='social-share-wrapper'><div>Share on:</div><ul class='dshare'>";
+		    $html = "<div class='social-share-wrapper'><ul class='dshare'>";
 
-		    //global $post;
+		    global $post;
 
 		    $url = get_permalink($post->ID);
 		    $url = esc_url($url);
