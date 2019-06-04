@@ -1,4 +1,4 @@
-=== VSS-social_Share ===
+=== Rating Post Plugin ===
 Tags: rating, Rating Post Plugin
 Requires at least: 4.0
 Tested up to: 5.0
